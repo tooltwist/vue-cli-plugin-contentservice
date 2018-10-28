@@ -26,7 +26,7 @@ For more information about this and other prefabricated application components, 
 
 ### Oops
 This plugin, like most Vue CLI plugins, is intended to work on a fresh project created using `vue create`.
-It will _probably_ work for existing project that have a similar file layout,
+It will probably work for any existing project that has a similar file layout,
 but if you have problems the code changes can usually be reversed out without much effort.
 
 See [here](https://github.com/tooltwist/vue-cli-plugin-contentservice/wiki/What-this-Plugin-does) for a description of what this plugin does.
