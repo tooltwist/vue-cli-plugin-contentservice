@@ -1,3 +1,4 @@
+### Add Content Management to your Vue App
 This Vue-cli 3 plugin will add [ContentService](http://contentservice.io) to a standard VueJS project.
 
 Usage is simple:
