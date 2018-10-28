@@ -50,22 +50,16 @@ Vue.use(ContentService, {
 
     // Use App2 instead of App
     lines.forEach((line, index) => {
-      console.log(`line ${index} = ${line}`);
       lines[index] = line.replace(/App/g, 'App2')
     })
 
-    // Add our new code after the last import statement
+    // Add our initialization code after the last import statement
     const lastImportIndex = lines.findIndex(line => line.match(/^import/));
     lines[lastImportIndex] += initializationCode;
 
     // Write the file back.
     contentMain = lines.reverse().join('\n');
     fs.writeFileSync(mainPath, contentMain, { encoding: 'utf-8' });
-
-
-    let jPath = './junk.js'
-    let jContent = 'What a load of crap.\n'
-    fs.writeFileSync(jPath, jContent, { encoding: 'utf-8' });
   });
 
 }
