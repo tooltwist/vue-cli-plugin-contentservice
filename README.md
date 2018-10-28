@@ -1,4 +1,4 @@
-### Add Content Management to your Vue App
+## Add Content Management to your Vue App
 
 Usage is simple:
 
