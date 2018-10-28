@@ -8,7 +8,6 @@ Usage is simple:
     
 You can then view the site in development mode:
 
-    yarn install
     yarn serve
 
 Open your browser at http://localhost:8080.
