@@ -69,6 +69,19 @@ Vue.use(ContentService, {
     // Write the file back.
     contentMain = lines.reverse().join('\n');
     fs.writeFileSync(mainPath, contentMain, { encoding: 'utf-8' });
+
+    /*
+     * Update package.json
+     * Remove core-js, as we've added "@babel/runtime-corejs2"
+     */
+    const packageJsonPath = api.resolve(`./package.json`);
+    let contentPackageJson = fs.readFileSync(packageJsonPath, { encoding: 'utf-8' });
+    const lines2 = contentPackageJson.split(/\r?\n/g);
+    const coreJsIndex = lines2.findIndex(line => line.match(/"core-js":/));
+    console.log(`Removing core-js from package.json, line ${coreJsIndex}`)
+    lines2.splice(coreJsIndex, 1);
+    contentPackageJson = lines2.join('\n');
+    fs.writeFileSync(packageJsonPath, contentPackageJson, { encoding: 'utf-8' });
   });
 
 }
