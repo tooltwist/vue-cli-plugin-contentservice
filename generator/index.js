@@ -1,10 +1,14 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     dependencies: {
-      "@fortawesome/fontawesome-free": "^5.4.2",
-      "babel-runtime": "^6.26.0",
+      "@babel/runtime-corejs2": "^7.4.5",
       "bulma": "^0.7.2",
-      "vue-contentservice": "^0.1.76"
+      "jquery": "^3.4.1",
+      //"@fortawesome/fontawesome-free": "^5.4.2",
+      //"babel-runtime": "^6.26.0",
+      //"bulma": "^0.7.5",
+      "vue-contentservice": "^0.1.76",
+      "vue-split-panel": "^1.0.4"
     },
   });
 
