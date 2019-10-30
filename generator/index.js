@@ -31,12 +31,12 @@ Vue.use(ContentService, {
   froalaActivationKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxx=='
 });`
 
-  api.onCreateComplete(() => {
+  api.onCreateComplete(function isCompleted() {
 
     console.log(`\nIn api.onCreateComplete`);
 
     // copy and render all files in ./template with ejs
-    api.render('./template')
+    //api.render('./template')
 
     /*
      *  Inject initialization into main.js
