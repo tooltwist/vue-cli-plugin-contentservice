@@ -24,6 +24,10 @@ module.exports = (api, options, rootOptions) => {
   let initializationCode = `
 import ContentService from 'vue-contentservice';
 
+const $ = require('jquery')
+window.$ = $
+window.jQuery = $
+
 require('font-awesome/css/font-awesome.min.css')
 require('bulma/css/bulma.min.css')
 require('vue-contentservice/dist/vue-contentservice.css')
