@@ -2,13 +2,15 @@ module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     dependencies: {
       "@babel/runtime-corejs2": "^7.4.5",
-      "bulma": "^0.7.2",
-      "jquery": "^3.4.1",
       //"@fortawesome/fontawesome-free": "^5.4.2",
-      //"babel-runtime": "^6.26.0",
-      //"bulma": "^0.7.5",
-      "vue-contentservice": "^0.1.76",
+      "@tooltwist/vue-contentservice": "^0.2.3",
+      "jquery": "^3.4.1",
+      "bulma": "^0.7.5",
       "vue-split-panel": "^1.0.4"
+    },
+    devDependencies: {
+      "node-sass": "^4.13.0",
+      "sass-loader": "^7.1.0",
     },
   });
 
@@ -22,15 +24,16 @@ module.exports = (api, options, rootOptions) => {
    *  Update main.js or main.ts
    */
   let initializationCode = `
-import ContentService from 'vue-contentservice';
+import ContentService from '@tooltwist/vue-contentservice';
 
 const $ = require('jquery')
 window.$ = $
 window.jQuery = $
 
-require('font-awesome/css/font-awesome.min.css')
+//require('font-awesome/css/font-awesome.min.css')
 require('bulma/css/bulma.min.css')
-require('vue-contentservice/dist/vue-contentservice.css')
+require('@tooltwist/vue-contentservice/dist/vue-contentservice.css')
+require('@tooltwist/vue-contentservice/src/assets/css/client.css')
 
 Vue.use(ContentService, {
   host: 'uat.crowdhound.io',
