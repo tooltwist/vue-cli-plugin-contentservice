@@ -33,7 +33,7 @@ window.jQuery = $
 //require('font-awesome/css/font-awesome.min.css')
 require('bulma/css/bulma.min.css')
 require('@tooltwist/vue-contentservice/dist/vue-contentservice.css')
-require('@tooltwist/vue-contentservice/src/assets/css/client.css')
+require('@tooltwist/vue-contentservice/src/assets/css/client.scss')
 
 Vue.use(ContentService, {
   host: 'uat.crowdhound.io',
