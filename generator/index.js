@@ -40,7 +40,14 @@ Vue.use(ContentService, {
   version: '2.0',
   apikey: 'API10O0X1NS8FWUTO3FXKN15ZOR09',
   froalaActivationKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxx=='
-});`
+});
+
+// Import and use Vue Froala lib.
+// import VueFroala from 'vue-froala-wysiwyg'
+// Vue.use(VueFroala, {
+//   attribution: false
+// })
+`
 
   api.onCreateComplete(function isCompleted() {
 
