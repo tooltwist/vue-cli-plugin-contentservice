@@ -3,7 +3,7 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       "@babel/runtime-corejs2": "^7.4.5",
       //"@fortawesome/fontawesome-free": "^5.4.2",
-      "@tooltwist/vue-contentservice": "^0.2.3",
+      "@tooltwist/vue-contentservice": "^0.2.5",
       "jquery": "^3.4.1",
       "bulma": "^0.7.5",
       "vue-split-panel": "^1.0.4"
